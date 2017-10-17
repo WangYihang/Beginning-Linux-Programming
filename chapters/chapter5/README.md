@@ -1,5 +1,7 @@
 # Chapter5 : 终端
 
+---
+
 ##### 5.1 对终端进行读写
 
 ```c
@@ -56,13 +58,34 @@ int main(int argc, char** argv){
 ```
 all:incorrect correct
 incorrect:incorrect.c
-	gcc -o incorrect incorrect.c
+    gcc -o incorrect incorrect.c
 correct:correct.c
-	gcc -o correct correct.c
+    gcc -o correct correct.c
 clean:
-	rm -rf incorrect
-	rm -rf correct
+    rm -rf incorrect
+    rm -rf correct
 ```
+
+标准模式和非标准模式 : 
+
+* 标准模式 : 行缓冲模式 , 例如用户输入 x\n , 然后字符 x 会被 getchar\(\) 函数接收 , 但是 \n 依然留存在缓冲区中
+* 非标准模式 : 更为灵活 , 将会在后面的章节中详细讲解
+
+---
+
+##### 5.2 处理重定向输出
+
+如何判断程序的标准输出是否被重定向 ?
+
+利用函数 : 
+
+```
+#include <unistd.h>
+
+int isatty(int fd);
+```
+
+
 
 
 
