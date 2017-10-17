@@ -85,7 +85,7 @@ clean:
 int isatty(int fd);
 ```
 
-```
+```c
 #include <stdio.h>
 
 int main(int argc, char ** argv){
