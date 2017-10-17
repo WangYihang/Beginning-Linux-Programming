@@ -79,7 +79,7 @@ clean:
 
 利用函数 :
 
-```
+```c
 #include <unistd.h>
 
 int isatty(int fd);
@@ -115,17 +115,13 @@ int main(int argc, char ** argv){
 ```
 all:bind bright
 bright:bright.c
-	gcc -o bright bright.c
+    gcc -o bright bright.c
 bind:bind.c
-	gcc -o bind bind.c
+    gcc -o bind bind.c
 clean:
-	rm -rf ./bind
-	rm -rf ./bright
+    rm -rf ./bind
+    rm -rf ./bright
 ```
-
-
-
-
 
 
 
