@@ -104,7 +104,7 @@ int main(int argc, char ** argv){
 
 int main(int argc, char ** argv){
     char redirect[] = "Redirection!\n";
-    if(!isatty(STDOUT)){
+    if(!isatty(STDOUT)){ // 当检测到 STDOUT 不是一个 tty 的时候 , 就向 STDERR 输出字符串 , 单纯重定向并不会重定向 STDERR
         write(STDERR, redirect, sizeof(redirect));
     }
     printf("Hello world!\n");
