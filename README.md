@@ -6,4 +6,4 @@
 
 ---
 
-> [GitBook](https://wangyihang.gitbooks.io/beginning-linux-programming)
+> [GitBook](https://www.gitbook.com/book/wangyihang/beginning-linux-programming)
